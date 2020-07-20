@@ -1,0 +1,172 @@
+<!-- Widget Section -->
+<div class="col-xs-12 col-sm-4 col-md-3 col-lg-3 sidebar">
+
+<!-- Single Widget -->
+
+<div class="widget wow fadeInUp"  data-wow-duration="1000ms">
+    <div class="widget-title">
+       <h4 class="title-style">Search</h4>
+    </div>
+   <div class="widget-content">
+        {% include 'search/_search-form' %}
+   </div>
+</div>
+<!-- End Single Widget -->
+
+{#<!-- Single Widget -->
+<div class="widget wow fadeInDown">
+    <div class="widget-title">
+       <h4 class="title-style">Newsletter</h4>
+       <p>Signup to receive email updates and to hear what's going on with my blog!</p>
+    </div>
+    <div class="widget-content">
+        <form action="#" class="newsletter">
+            <input type="email" name="email" class="form-control input-field" placeholder="Enter your email" required="">
+            <button type="submit" class="btn btn-main btn-shadow shutter-both">Subscribe</button>
+        </form>
+    </div>
+</div>
+<!-- End Single Widget -->#}
+
+<!-- Single Widget -->{#
+<div class="widget wow fadeInDown">
+  <div class="widget-title">
+     <h4 class="title-style">Categories</h4>
+  </div>
+  <div class="widget-content">
+      <ul class="categories">
+          <li><i class="fa fa-plus"></i> <a href="#">Marketing Policy</a></li>
+          <li><i class="fa fa-plus"></i> <a href="#">Business Strategy</a></li>
+          <li><i class="fa fa-plus"></i> <a href="#">Web Research</a></li>
+          <li><i class="fa fa-plus"></i> <a href="#">Web Development</a></li>
+          <li><i class="fa fa-plus"></i> <a href="#">Business Model</a></li>
+      </ul>
+  </div>
+</div>#}
+
+
+<div class="widget wow fadeInDown">
+<div class="widget-title">
+   <h4 class="title-style">Status</h4>
+</div>
+<div class="widget-content">
+    <ul class="categories">
+                                   
+      {% set newArrivals = craft.products.type('newArrivals').count() %}
+      {% set tradeIns = craft.products.type('tradeIns').count() %}
+      {% set specials = craft.products.type('specials').count() %}
+
+      <li><a href="/new-arrivals">New Arrivals ({{ newArrivals }})</a>
+      </li>
+      <li><a href="/trade-ins">Trade Ins ({{ tradeIns }})</a>
+      </li>
+      <li><a href="/specials">Specials ({{ specials }})</a>
+      </li>
+
+    </ul>
+  </div>
+</div>
+
+
+<div class="widget wow fadeInDown">
+  <div class="widget-title">
+     <h4 class="title-style">Products</h4>
+  </div>
+  <div class="widget-content">
+      <ul class="categories">
+        
+        {#{% set entriesIds = craft.products.ids() %}
+        {% set products = craft.categories.relatedTo({
+          sourceElement: entriesIds,
+          field: 'productType'
+        }).all() %}
+
+        {% for category in products %}
+        {% set entriesCount = craft.products.relatedTo(category).count() %}
+          {% if category.level == 1 %}
+          <li><i class="fa fa-plus"></i><a href="{{ category.url }}">{{ category.title }} ({{ entriesCount }})</a></li>
+            {% else %}
+            <ul>
+              <li><a href="{{ category.url }}">{{ category.title }} ({{ entriesCount }})</a></li>
+            </ul>
+          {% endif %}
+        {% endfor %}#}
+
+        {# ------ #}
+                                     
+        {% set entriesIds = craft.products.ids() %}
+        {% set products = craft.categories.relatedTo({
+          sourceElement: entriesIds,
+          field: 'productType'
+        }).all() %}
+
+        {% for category in products %}
+        {% set entriesCount = craft.products.relatedTo(category).count() %}
+
+        {% if category.level == 1 %}
+        {% set counter = ( counter | default(0) ) + 1 %}
+        <li data-toggle="collapse" data-target="#category{{ counter }}" class="#collapse"><i class="{% if category.hasDescendants() %}fa fa-plus pointer{% endif %}"></i><a href="{{ category.url }}">{{ category.title }} ({{ entriesCount }})</a>
+
+          {% set subCategories = craft.categories.descendantOf(category).relatedTo({
+            sourceElement: entriesIds,
+            field: 'productType'
+          }).all() %}
+          
+          <ul id="category{{ counter }}" class="collapse">
+            {% for subCategory in subCategories %}
+              {% set entriesSubCount = craft.products.relatedTo(category).count() %}
+              <li><a href="{{ subCategory.url }}">– {{ subCategory.title }}</a></li>
+            {% endfor %}
+          </ul>
+          
+        </li>
+        {% endif %}
+        {% endfor %}
+
+      </ul>
+    </div>
+</div>
+
+<div class="widget wow fadeInDown">
+  <div class="widget-title">
+     <h4 class="title-style">Brands</h4>
+  </div>
+  <div class="widget-content">
+      <ul class="categories">
+                                     
+        {% set entriesIds = craft.products.ids() %}
+        {% set products = craft.categories.relatedTo({
+          sourceElement: entriesIds,
+          field: 'productBrand'
+        }).all() %}
+
+        {% for category in products %}
+        {% set entriesCount = craft.products.relatedTo(category).count() %}
+
+        {% if category.level == 1 %}
+        {% set counter = ( counter | default(0) ) + 1 %}
+        <li data-toggle="collapse" data-target="#category{{ counter }}" class="#collapse"><i class="{% if category.hasDescendants() %}fa fa-plus pointer{% endif %}"></i><a href="{{ category.url }}">{{ category.title }} ({{ entriesCount }})</a>
+
+          {% set subCategories = craft.categories.descendantOf(category).relatedTo({
+            sourceElement: entriesIds,
+            field: 'productType'
+          }).all() %}
+          
+          <ul id="category{{ counter }}" class="collapse">
+            {% for subCategory in subCategories %}
+              {% set entriesSubCount = craft.products.relatedTo(category).count() %}
+              <li><a href="{{ subCategory.url }}">– {{ subCategory.title }}</a></li>
+            {% endfor %}
+          </ul>
+          
+        </li>
+        {% endif %}
+        {% endfor %}
+
+      </ul>
+    </div>
+</div>
+
+<!-- End Single Widget -->
+</div>
+<!-- End Widget Section -->
