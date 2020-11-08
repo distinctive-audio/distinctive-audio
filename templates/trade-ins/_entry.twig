@@ -21,60 +21,70 @@
             <section class="portfolio-detail">
               <div class="container">
             
-                {% set variant = product.defaultVariant %}
+                {% for portfolio in craft.entries.section('tradeIns').limit(1).all() %}
                 
                 <div class="row">
                  
                 <div class="col-md-12">
                     <div class="project-title">
-                      <h1>{{ product.title }}</h1>
+                      <h1>{{ entry.title }}</h1>
                     </div>
                 </div>
                 <div class="col-md-7">
+                    {% if entry.tradeInsImage | length %}
                     <div class="project-large-thumb img-responsive">
-                        <img src="{{ product.productImage.one().getUrl('FourteenFortyTenEightyThumb') }}" alt="{{ product.title }}">
+                        <img src="{{ entry.tradeInsImage.one().getUrl('FourteenFortyTenEightyThumb') }}" alt="{{ entry.title }}">
                     </div>
+                    {% endif %}
                 </div>
                 <div class="col-sm-10 col-md-5">
                     <div class="project-details">
+                        {% if entry.productDescription %}
                         <h3>About the Product</h3>
-                        <p>{{ product.description }}</p>
+                        <p>{{ entry.productDescription }}</p>
+                        {%  endif %}
 
                         <div class="row product-details">
-
                             <div class="col-xs-4 col-md-4">
-                                <h4>Type</h4>
-                                <h5><a href="/trade-ins">Trade Ins</a></h5>
+                                <h4>Status</h4>
+                                <h4><a href="/new-arrivals">Trade Ins</a></h4>
                             </div>
                             
                             <div class="col-xs-4 col-md-4">
                                 <h4>Brand</h4>
 
-                                {% set category = product.productBrand.one() %}
-                                <h5><a href="{{ category.url }}">{{ category.title }}</a></h5>
+                                {% set category = entry.productBrand.one() %}
+                                {% if category %}
+                                <h4><a href="{{ category.url }}">{{ category.title }}</a></h4>
+                                {% endif %}
                             </div>
                             <div class="col-xs-4 col-md-4">
                                 <h4>Product</h4>
 
-                                {% set category = product.productType.one() %}
-                                <h5><a href="{{ category.url }}">{{ category.title }}</a></h5>
+                                {% set category = entry.productType.one() %}
+                                {% if category %}
+                                <h4><a href="{{ category.url }}">{{ category.title }}</a></h4>
+                                {% endif %}
                             </div>
                         </div>
                         <div class="row product-details">
                             
                             <!-- SALE PRICE -->
-                            {% if product.suggestedRetailPrice %}
+                            {% if entry.suggestedRetailPrice %}
                             <div class="col-xs-4">
                                 <h4>Suggested Retail Price</h4>
-                                <h4>{{ product.suggestedRetailPrice | currency('USD') }}</h4>
+                                <h4>{{ entry.suggestedRetailPrice | currency('USD') }}</h4>
                             </div>
                             {% endif %}
 
+                            {% if entry.salePrice %}
                             <div class="col-xs-4">
                                 <h4>Sale Price</h4>
-                                <h4>{{ variant.price | currency('USD') }}</h4>
+                                <h4>{{ entry.salePrice | currency('USD') }}</h4>
                             </div>
+                            {% endif %}
                             {# Add to cart button #}
+                            {#
                             <form method="POST">
                                 <input type="hidden" name="action" value="commerce/cart/update-cart">
                                 <input type="hidden" name"cartUpdatedNotice" value="Added {{ product.title }} to the cart.">
@@ -83,12 +93,14 @@
                                 <input type="hidden" name="qty" value="1">
                                 <input type="hidden" name="purchasableId" value="{{ variant.id }}">
                                 <input class="btn btn-main shutter-both" type="submit" value="Add to cart">
-                            </form>
+                            </form>#}
                         </div>
                     </div>
                 </div>
 
-                </div>
+            </div>
+
+            {%  endfor %}
 
                 <div class="row">
                   <ul class="pager">
@@ -108,16 +120,33 @@
                 <div class="container-fluid wow fadeIn">
                     <div class="row project-wrapper">
 
-                        {% set products = craft.products.type('tradeIns').limit(4).all() %}
+                        {% set products = craft.entries.section('tradeIns').limit(4).all() %}
                         {% for product in products %}
 
-                        <div class="col-xs-12 col-sm-6 col-md-3 analogue">
+                        {# <div class="col-xs-12 col-sm-6 col-md-3 analogue">
+                            {% if product.tradeInsImage | length %}
                             <div class="img-overlay">
-                                <img src="{{ product.productImage.one().getUrl('FourteenFortyTenEightyThumb') }}" alt="{{ product.title }}">
+                                <img src="{{ product.tradeInsImage.one().getUrl('FourteenFortyTenEightyThumb') }}" alt="{{ product.title }}">
                                 <a class="hover-plus" href="{{ product.url }}">
                                     <h4>{{ product.title }}</h4>
                                 </a>
                             </div>
+                            {% endif %}
+                        </div> #}
+
+                        <div class="col-xs-12 col-sm-6 col-md-3 product portfolio-content">
+                            {% if product.tradeInsImage | length %}
+                            <div class="img-overlay">
+                                <img src="{{ product.tradeInsImage.one().getUrl('FourteenFortyTenEightyThumb') }}" alt="{{ product.title }}">
+                                <a class="hover-plus" href="{{ product.url }}">
+                                    <i class="fa fa-plus" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                            {% endif %}
+                            <a href="{{ product.url }}">
+                                <h4 class="product-title">{{ product.title }}</h4>
+                                {# <p>{{ product.defaultPrice | currency('USD') }}</p> #}
+                            </a>
                         </div>
 
                         {% endfor %}

@@ -1,0 +1,17 @@
+contentColumnType: text
+fieldGroup: b406058a-faea-4d8a-af1c-c58f1515c881
+handle: announcements
+instructions: 'Enter announcement'
+name: Announcements
+searchable: true
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: '1'
+  placeholder: 'Enter announcement.'
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

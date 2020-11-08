@@ -1,0 +1,65 @@
+field: e9d4674e-d79e-4dee-857d-ee7af1af938c
+fieldLayouts:
+  30e9d6b8-5d86-4f36-a474-54eda5a55e6f:
+    tabs:
+      -
+        fields:
+          275ad980-870c-4c7b-a262-f73ab2433010:
+            required: true
+            sortOrder: 2
+          f7286ad0-bbbb-40db-aa97-cbf3101f69f1:
+            required: true
+            sortOrder: 1
+        name: Content
+        sortOrder: 1
+fields:
+  275ad980-870c-4c7b-a262-f73ab2433010:
+    contentColumnType: text
+    fieldGroup: null
+    handle: altField
+    instructions: 'Enter image description'
+    name: 'Alt Field'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: 'Enter image description.'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  f7286ad0-bbbb-40db-aa97-cbf3101f69f1:
+    contentColumnType: string
+    fieldGroup: null
+    handle: productImage
+    instructions: 'Select product image'
+    name: 'Product Image'
+    searchable: true
+    settings:
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:8f369514-5b46-49c6-9fd2-5db66f81e30e'
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      restrictFiles: '1'
+      selectionLabel: 'Add a product image'
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      singleUploadLocationSource: 'volume:8f369514-5b46-49c6-9fd2-5db66f81e30e'
+      singleUploadLocationSubpath: ''
+      source: null
+      sources: '*'
+      targetSiteId: null
+      useSingleFolder: true
+      validateRelatedElements: ''
+      viewMode: large
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+handle: productImage
+name: 'Product Image'
+sortOrder: 1

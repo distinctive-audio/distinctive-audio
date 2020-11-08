@@ -451,6 +451,10 @@ nav.work-filter ul li {
     text-decoration: none;
 }
 
+.project-wrapper .product {
+    padding-right: 20px;
+}
+
 .product-title {
    margin: 0.75em 0 0.10em; 
 }

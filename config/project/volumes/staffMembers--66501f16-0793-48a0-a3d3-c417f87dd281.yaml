@@ -1,0 +1,8 @@
+handle: staffMembers
+hasUrls: true
+name: 'Staff Members'
+settings:
+  path: '@root/web/images/staff-members'
+sortOrder: 4
+type: craft\volumes\Local
+url: //distinctive-audio.test/images/staff-members

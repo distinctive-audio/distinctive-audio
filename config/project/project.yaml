@@ -1,0 +1,46 @@
+dateModified: 1604846086
+email:
+  fromEmail: sebastian.nadeau45@gmail.com
+  fromName: 'Distinctive Audio'
+  transportType: craft\mail\transportadapters\Sendmail
+graphql:
+  publicToken:
+    enabled: false
+    expiryDate: null
+plugins:
+  contact-form:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+    settings:
+      allowAttachments: ''
+      prependSender: ''
+      prependSubject: ''
+      successFlashMessage: 'Your message has been sent.'
+      toEmail: sebastian.nadeau45@gmail.com
+  contact-form-honeypot:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+    settings:
+      honeypotParam: fromPhone
+  feed-me:
+    edition: standard
+    enabled: true
+    schemaVersion: 4.3.0
+  redactor:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.3.0
+system:
+  edition: solo
+  live: true
+  name: 'Distinctive Audio'
+  schemaVersion: 3.5.13
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: ''
+  photoVolumeUid: null
+  requireEmailVerification: true

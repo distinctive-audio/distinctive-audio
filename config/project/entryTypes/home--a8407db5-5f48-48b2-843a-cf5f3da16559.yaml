@@ -1,0 +1,77 @@
+fieldLayouts:
+  c0698f2e-c743-435c-8da6-9bfd185db3ef:
+    tabs:
+      -
+        elements:
+          -
+            instructions: null
+            label: Title
+            type: craft\fieldlayoutelements\EntryTitleField
+          -
+            fieldUid: 013b5064-e06b-4464-99dc-5c6736b1647c
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 0f785581-fb1e-4dcb-a8a6-b318ef2442ec
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 1e14e2c5-fcf0-4386-9b31-cb3a27e26e14
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 550b919c-b0a2-4efa-90bf-31e7777d5349
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 55627598-7306-4231-9fd0-426030671f1a
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 49d5d307-05b5-4d1a-9d26-2f6f1765e504
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: Home
+        sortOrder: 1
+      -
+        elements:
+          -
+            fieldUid: 4dbee5b3-ba1a-43ce-91c8-4bf029ef2081
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 87561c62-c9a2-422f-aee7-36748071db5a
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 1bf898bb-8fd9-4621-936f-a0a626830661
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: a2a74b6e-84bd-4382-8378-82795f25b1d6
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 18e7a260-0b40-43fb-994b-5dc950d19d8f
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: Services
+        sortOrder: 2
+      -
+        elements:
+          -
+            fieldUid: 7160f499-42c6-4569-bb6d-408e3b3b12ac
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 6a913914-bdde-4106-89c6-7c202839dfbe
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: Staff
+        sortOrder: 3
+handle: home
+hasTitleField: true
+name: Home
+section: 58559379-0f35-4555-b522-a6551550a19d
+sortOrder: 1
+titleFormat: '{section.name|raw}'

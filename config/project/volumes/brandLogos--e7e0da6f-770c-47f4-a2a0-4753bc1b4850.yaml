@@ -1,0 +1,8 @@
+handle: brandLogos
+hasUrls: true
+name: 'Brand Logos'
+settings:
+  path: '@root/web/images/brand-logos'
+sortOrder: 2
+type: craft\volumes\Local
+url: //distinctive-audio.test/images/brand-logos

@@ -1,0 +1,25 @@
+fieldLayouts:
+  ea811d81-10eb-477b-a54a-53fb3ee43a27:
+    tabs:
+      -
+        elements:
+          -
+            instructions: null
+            label: Title
+            type: craft\fieldlayoutelements\EntryTitleField
+          -
+            fieldUid: 013b5064-e06b-4464-99dc-5c6736b1647c
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: 8a1fe93d-b584-4313-8ffe-97e79c98c562
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: 'Thank You'
+        sortOrder: 1
+handle: thanks
+hasTitleField: true
+name: 'Thank You'
+section: 457e7f25-eb5d-4d55-a592-75d06bb9d2c9
+sortOrder: 1
+titleFormat: '{section.name|raw}'

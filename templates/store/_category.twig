@@ -37,12 +37,20 @@
 
                                         <div class="row products">
 
-                                        {% paginate craft.products.relatedTo(category).limit(12) as products %}
+                                        {% paginate craft.entries.relatedTo(category).limit(12) as products %}
                                         {% for product in products %}
 
                                         <div class="col-xs-12 col-sm-6 col-md-4 product portfolio-content">
                                                 <div class="img-overlay">
-                                                    <img src="{{ product.productImage.one().getUrl('FourteenFortyTenEightyThumb') }}" alt="{{ product.title }}">
+                                                    {% if product.newArrivalsImage | length %}
+                                                    <img src="{{ product.newArrivalsImage.one().getUrl('FourteenFortyTenEightyThumb') }}" alt="{{ product.title }}">
+                                                    {%  endif %}
+                                                    {% if product.tradeInsImage | length %}
+                                                    <img src="{{ product.tradeInsImage.one().getUrl('FourteenFortyTenEightyThumb') }}" alt="{{ product.title }}">
+                                                    {%  endif %}
+                                                    {% if product.specialsImage | length %}
+                                                    <img src="{{ product.specialsImage.one().getUrl('FourteenFortyTenEightyThumb') }}" alt="{{ product.title }}">
+                                                    {%  endif %}
                                                     <a class="hover-plus" href="{{ product.url }}">
                                                         <i class="fa fa-plus" aria-hidden="true"></i>
                                                     </a>

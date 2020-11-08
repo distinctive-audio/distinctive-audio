@@ -37,16 +37,18 @@
 
                                         <div class="row products">
 
-                                        {% paginate craft.products.type('tradeIns').limit(12) as products %}
+                                        {% paginate craft.entries.type('tradeIns').limit(9) as products %}
                                         {% for product in products %}
 
                                         <div class="col-xs-12 col-sm-6 col-md-4 product portfolio-content">
+                                                {% if product.tradeInsImage | length %}
                                                 <div class="img-overlay">
-                                                    <img src="{{ product.productImage.one().getUrl('FourteenFortyTenEightyThumb') }}" alt="{{ product.title }}">
+                                                    <img src="{{ product.tradeInsImage.one().getUrl('FourteenFortyTenEightyThumb') }}" alt="{{ product.title }}">
                                                     <a class="hover-plus" href="{{ product.url }}">
                                                         <i class="fa fa-plus" aria-hidden="true"></i>
                                                     </a>
                                                 </div>
+                                                {% endif %}
                                                 <a href="{{ product.url }}">
                                                     <h4 class="product-title">{{ product.title }}</h4>
                                                     {# <p>{{ product.defaultPrice | currency('USD') }}</p> #}
@@ -59,6 +61,7 @@
 
                                         <nav class="post-pagination margin-top wow fadeInDown"  data-wow-duration="1000ms" data-wow-delay="300ms">
 
+                                            <!-- /.pagination -->
                                             <ul class="pagination">
                                               {% if paginate.prevUrl %}
                                                 <li><a href="{{ paginate.prevUrl }}">Previous</a></li>
@@ -78,7 +81,6 @@
                                                 <li><a href="{{ paginate.nextUrl }}">Next</a></li>
                                               {% endif %}
                                             </ul>
-
                                         </nav>
                                         
                                     </div>

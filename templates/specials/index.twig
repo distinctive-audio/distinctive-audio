@@ -37,16 +37,18 @@
 
                                         <div class="row products">
 
-                                        {% paginate craft.products.type('specials').limit(12) as products %}
+                                        {% paginate craft.entries.type('specials').limit(9) as products %}
                                         {% for product in products %}
 
                                         <div class="col-xs-12 col-sm-6 col-md-4 product portfolio-content">
+                                                {% if product.specialsImage | length %}
                                                 <div class="img-overlay">
-                                                    <img src="{{ product.productImage.one().getUrl('FourteenFortyTenEightyThumb') }}" alt="{{ product.title }}">
+                                                    <img src="{{ product.specialsImage.one().getUrl('FourteenFortyTenEightyThumb') }}" alt="{{ product.title }}">
                                                     <a class="hover-plus" href="{{ product.url }}">
                                                         <i class="fa fa-plus" aria-hidden="true"></i>
                                                     </a>
                                                 </div>
+                                                {% endif %}
                                                 <a href="{{ product.url }}">
                                                     <h4 class="product-title">{{ product.title }}</h4>
                                                     {# <p>{{ product.defaultPrice | currency('USD') }}</p> #}

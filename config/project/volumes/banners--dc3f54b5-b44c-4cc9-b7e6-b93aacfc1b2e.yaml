@@ -1,0 +1,8 @@
+handle: banners
+hasUrls: true
+name: Banners
+settings:
+  path: '@root/web/images/banners'
+sortOrder: 1
+type: craft\volumes\Local
+url: //distinctive-audio.test/images/banners

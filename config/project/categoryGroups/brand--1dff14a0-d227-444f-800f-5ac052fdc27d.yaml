@@ -1,0 +1,20 @@
+fieldLayouts:
+  c930402b-e20f-45c9-bd1e-ec75c3626910:
+    tabs:
+      -
+        fields:
+          f541b1c1-b121-4c59-a4ec-dae0a312e66e:
+            required: false
+            sortOrder: 1
+        name: 'Brand Category'
+        sortOrder: 1
+handle: brand
+name: Brand
+siteSettings:
+  a16b48a6-e0e5-4d2b-8af7-97f71004a903:
+    hasUrls: true
+    template: store/_category
+    uriFormat: '{% if parent %}{{ parent.uri }}{% endif %}/{slug}'
+structure:
+  maxLevels: null
+  uid: cd32142b-ae28-4e58-8e73-9e285a1842fb

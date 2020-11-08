@@ -1,0 +1,8 @@
+handle: productImages
+hasUrls: true
+name: 'Product Images'
+settings:
+  path: '@root/web/images/product-images'
+sortOrder: 3
+type: craft\volumes\Local
+url: //distinctive-audio.test/images/product-images

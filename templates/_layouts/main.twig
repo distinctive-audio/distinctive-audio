@@ -105,13 +105,15 @@ End Fixed Navigation
             <div class="col-sm-6 col-md-4">
                 <div class="footer-item">
                     <h3 class="title-style">New Arrivals</h3>
-                    {% set products = craft.products.type('newArrivals').limit(2).all() %}
+                    {% set products = craft.entries.section('newArrivals').limit(2).all() %}
                     {% for product in products %}
                     <div class="widget-post">
                         <div class="media">
                             <div class="media-left">
                                 <a href="{{ product.url }}">
-                                  <img src="{{ product.productImage.one().getUrl('oneTwentyEightyThumb') }}" alt="{{ product.title }}" />
+                                  {% if product.newArrivalsImage | length %}
+                                  <img src="{{ product.newArrivalsImage.one().getUrl('oneTwentyEightyThumb') }}" alt="{{ product.title }}" />
+                                  {%  endif %}
                                 </a>
                             </div>
                             <div class="media-body">
@@ -128,13 +130,15 @@ End Fixed Navigation
             <div class="col-sm-6 col-md-4">
                 <div class="footer-item">
                     <h3 class="title-style">Trade Ins</h3>
-                    {% set products = craft.products.type('tradeIns').limit(2).all() %}
+                    {% set products = craft.entries.section('tradeIns').limit(2).all() %}
                     {% for product in products %}
                     <div class="widget-post">
                         <div class="media">
                             <div class="media-left">
                                 <a href="{{ product.url }}">
-                                  <img src="{{ product.productImage.one().getUrl('oneTwentyEightyThumb') }}" alt="{{ product.title }}" />
+                                  {% if product.tradeInsImage | length %}
+                                  <img src="{{ product.tradeInsImage.one().getUrl('oneTwentyEightyThumb') }}" alt="{{ product.title }}" />
+                                  {%  endif %}
                                 </a>
                             </div>
                             <div class="media-body">

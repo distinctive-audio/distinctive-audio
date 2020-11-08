@@ -1,0 +1,38 @@
+fieldLayouts:
+  17c4f8fc-2785-47f8-a610-4512f944d5d8:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\TitleField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+handle: newArrivals
+hasUrls: true
+name: 'New Arrivals'
+settings:
+  path: '@root/web/images/new-arrivals'
+sortOrder: 5
+type: craft\volumes\Local
+url: '@web/images/new-arrivals'

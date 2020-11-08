@@ -1,0 +1,86 @@
+field: 6a913914-bdde-4106-89c6-7c202839dfbe
+fieldLayouts:
+  308fe65d-c68a-4109-9bec-a8e9f6f000a7:
+    tabs:
+      -
+        fields:
+          5f49df0f-6f46-4dbd-af5b-903eb9c262e3:
+            required: false
+            sortOrder: 3
+          cb11528e-3c70-4310-a650-9489ab6cab2a:
+            required: true
+            sortOrder: 2
+          d4abbd3f-cf1e-4be5-a393-09cb07079e8e:
+            required: false
+            sortOrder: 1
+        name: Content
+        sortOrder: 1
+fields:
+  5f49df0f-6f46-4dbd-af5b-903eb9c262e3:
+    contentColumnType: text
+    fieldGroup: null
+    handle: staffMemberOccupation
+    instructions: 'Enter staff member occupation'
+    name: 'Staff Member Occupation'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: 'Enter staff member occupation.'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  cb11528e-3c70-4310-a650-9489ab6cab2a:
+    contentColumnType: text
+    fieldGroup: null
+    handle: staffMemberName
+    instructions: 'Enter staff member name'
+    name: 'Staff Member Name'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: 'Enter staff member name.'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  d4abbd3f-cf1e-4be5-a393-09cb07079e8e:
+    contentColumnType: string
+    fieldGroup: null
+    handle: staffMemberImage
+    instructions: 'Select staff member image'
+    name: 'Staff Member Image'
+    searchable: true
+    settings:
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:8f369514-5b46-49c6-9fd2-5db66f81e30e'
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      restrictFiles: '1'
+      selectionLabel: 'Add staff member image'
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      singleUploadLocationSource: 'volume:66501f16-0793-48a0-a3d3-c417f87dd281'
+      singleUploadLocationSubpath: ''
+      source: null
+      sources: '*'
+      targetSiteId: null
+      useSingleFolder: true
+      validateRelatedElements: ''
+      viewMode: large
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+handle: staffMemberImage
+name: 'Staff Member Image'
+sortOrder: 1

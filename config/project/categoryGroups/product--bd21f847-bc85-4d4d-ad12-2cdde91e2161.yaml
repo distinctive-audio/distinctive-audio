@@ -1,0 +1,20 @@
+fieldLayouts:
+  4f485b75-b6d3-4aa5-9664-fbd1b074bb1c:
+    tabs:
+      -
+        fields:
+          f541b1c1-b121-4c59-a4ec-dae0a312e66e:
+            required: false
+            sortOrder: 1
+        name: 'Product Category'
+        sortOrder: 1
+handle: product
+name: Product
+siteSettings:
+  a16b48a6-e0e5-4d2b-8af7-97f71004a903:
+    hasUrls: true
+    template: store/_category
+    uriFormat: '{% if parent %}{{ parent.uri }}{% endif %}/{slug}'
+structure:
+  maxLevels: null
+  uid: dc74c84e-8456-4470-b832-58d16f96c602
