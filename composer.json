@@ -1,11 +1,12 @@
 {
   "require": {
     "bolden/google-maps-api": "1.0.3",
-    "craftcms/cms": "3.5.15.1",
+    "craftcms/cms": "3.5.16",
     "craftcms/contact-form": "2.2.7",
     "craftcms/contact-form-honeypot": "1.0.2",
-    "craftcms/feed-me": "4.3.0",
+    "craftcms/feed-me": "4.3.1",
     "craftcms/redactor": "2.8.3",
+    "supercool/tablemaker": "2.0.1",
     "vlucas/phpdotenv": "^3.4.0"
   },
   "require-dev": {

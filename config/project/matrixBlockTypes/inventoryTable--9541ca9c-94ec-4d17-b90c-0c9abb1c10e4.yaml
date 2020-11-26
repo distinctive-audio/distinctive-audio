@@ -1,0 +1,66 @@
+field: c057b053-4155-4d39-bb1b-51c48091561c
+fieldLayouts:
+  d9f567cf-3801-4811-9ab8-f97427e265bb:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 0a7cb1ae-b730-4b9d-8de3-31f622be61e1
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 85e155b1-ff4f-4a9e-a292-00163653b845
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  0a7cb1ae-b730-4b9d-8de3-31f622be61e1:
+    contentColumnType: text
+    fieldGroup: null
+    handle: inventorySection
+    instructions: 'Add inventory section'
+    name: 'Inventory Section'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: 'Add inventory section.'
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  85e155b1-ff4f-4a9e-a292-00163653b845:
+    contentColumnType: text
+    fieldGroup: null
+    handle: inventoryTable
+    instructions: 'Enter inventory items on sale'
+    name: 'Inventory Table'
+    searchable: false
+    settings:
+      columnsAddRowLabel: 'Add a column'
+      columnsInstructions: 'Add an inventory category column'
+      columnsLabel: 'Add a category'
+      rowsAddRowLabel: 'Add a row'
+      rowsInstructions: 'Add an inventory item row'
+      rowsLabel: 'Add an item'
+    translationKeyFormat: null
+    translationMethod: none
+    type: supercool\tablemaker\fields\TableMakerField
+handle: inventoryTable
+name: 'Inventory Table'
+sortOrder: 1

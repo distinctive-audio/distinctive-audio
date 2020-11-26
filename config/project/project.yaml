@@ -1,4 +1,4 @@
-dateModified: 1604846086
+dateModified: 1606406675
 email:
   fromEmail: sebastian.nadeau45@gmail.com
   fromName: 'Distinctive Audio'
@@ -32,6 +32,10 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 2.3.0
+  tablemaker:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
 system:
   edition: solo
   live: true
