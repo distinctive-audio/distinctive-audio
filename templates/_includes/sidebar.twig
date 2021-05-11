@@ -62,11 +62,11 @@
       {% set tradeIns = craft.entries.section('tradeIns').count() %}
       {% set specials = craft.entries.section('specials').count() %}
 
-      <li><a href="/new-arrivals">New Arrivals ({{ newArrivals }})</a>
+      <li><a href="/new-arrivals">New Arrivals {#({{ newArrivals }})#}</a>
       </li>
-      <li><a href="/trade-ins">Trade Ins ({{ tradeIns }})</a>
+      <li><a href="/trade-ins">Trade Ins {#({{ tradeIns }})#}</a>
       </li>
-      <li><a href="/specials">Specials ({{ specials }})</a>
+      <li><a href="/specials">Specials {#({{ specials }})#}</a>
       </li>
 
     </ul>
@@ -92,7 +92,7 @@
         {% set counter = ( counter | default(0) ) + 1 %}
 
         {% if category.level == 1 %}
-        <li data-toggle="collapse" data-target="#category{{ counter }}" class="#collapse"><i class="{% if category.hasDescendants() %}fa fa-plus pointer{% endif %}"></i><a href="{{ category.url }}">{{ category.title }} ({{ entriesCount }})</a>
+        <li data-toggle="collapse" data-target="#category{{ counter }}" class="#collapse"><i class="{% if category.hasDescendants() %}fa fa-plus pointer{% endif %}"></i><a href="{{ category.url }}">{{ category.title }} {#({{ entriesCount }})#}</a>
 
           {% set subCategories = craft.categories.descendantOf(category).relatedTo({
             sourceElement: entriesIds,
@@ -132,7 +132,7 @@
         {% set counter = ( counter | default(0) ) + 1 %}
 
         {% if category.level == 1 %}
-        <li data-toggle="collapse" data-target="#category{{ counter }}" class="#collapse"><i class="{% if category.hasDescendants() %}fa fa-plus pointer{% endif %}"></i><a href="{{ category.url }}">{{ category.title }} ({{ entriesCount }})</a>
+        <li data-toggle="collapse" data-target="#category{{ counter }}" class="#collapse"><i class="{% if category.hasDescendants() %}fa fa-plus pointer{% endif %}"></i><a href="{{ category.url }}">{{ category.title }} {#({{ entriesCount }})#}</a>
 
           {% set subCategories = craft.categories.descendantOf(category).relatedTo({
             sourceElement: entriesIds,

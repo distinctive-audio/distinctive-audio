@@ -2501,7 +2501,7 @@ div.widget {
 
 .categories > li:hover a {
     /*padding-left: 10px;*/
-    color: #52b5ac;
+    /*color: #52b5ac;*/
 }
 
 .categories > li:last-child {

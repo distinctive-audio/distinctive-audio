@@ -4,18 +4,47 @@ fieldLayouts:
     tabs:
       -
         fields:
-          4424988d-4e34-40a6-98fb-0daf0428595a:
-            required: false
-            sortOrder: 3
           4ae1a81a-56e1-40ce-89d2-dbc006382d5e:
             required: false
             sortOrder: 1
+          4424988d-4e34-40a6-98fb-0daf0428595a:
+            required: false
+            sortOrder: 3
           b440f215-9400-4161-af1f-3fdcfbcc5ec4:
             required: true
             sortOrder: 2
         name: Content
         sortOrder: 1
 fields:
+  4ae1a81a-56e1-40ce-89d2-dbc006382d5e:
+    contentColumnType: string
+    fieldGroup: null
+    handle: brandLogo
+    instructions: 'Select brand logo'
+    name: 'Brand Logo'
+    searchable: true
+    settings:
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:8f369514-5b46-49c6-9fd2-5db66f81e30e' # Product Images
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      restrictFiles: '1'
+      selectionLabel: 'Select a brand logo'
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      singleUploadLocationSource: 'volume:e7e0da6f-770c-47f4-a2a0-4753bc1b4850' # Brand Logos
+      singleUploadLocationSubpath: ''
+      source: null
+      sources: '*'
+      targetSiteId: null
+      useSingleFolder: true
+      validateRelatedElements: ''
+      viewMode: large
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
   4424988d-4e34-40a6-98fb-0daf0428595a:
     contentColumnType: text
     fieldGroup: null
@@ -34,35 +63,6 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\PlainText
-  4ae1a81a-56e1-40ce-89d2-dbc006382d5e:
-    contentColumnType: string
-    fieldGroup: null
-    handle: brandLogo
-    instructions: 'Select brand logo'
-    name: 'Brand Logo'
-    searchable: true
-    settings:
-      allowedKinds:
-        - image
-      defaultUploadLocationSource: 'volume:8f369514-5b46-49c6-9fd2-5db66f81e30e'
-      defaultUploadLocationSubpath: ''
-      limit: '1'
-      localizeRelations: false
-      restrictFiles: '1'
-      selectionLabel: 'Select a brand logo'
-      showUnpermittedFiles: false
-      showUnpermittedVolumes: false
-      singleUploadLocationSource: 'volume:e7e0da6f-770c-47f4-a2a0-4753bc1b4850'
-      singleUploadLocationSubpath: ''
-      source: null
-      sources: '*'
-      targetSiteId: null
-      useSingleFolder: true
-      validateRelatedElements: ''
-      viewMode: large
-    translationKeyFormat: null
-    translationMethod: site
-    type: craft\fields\Assets
   b440f215-9400-4161-af1f-3fdcfbcc5ec4:
     contentColumnType: text
     fieldGroup: null

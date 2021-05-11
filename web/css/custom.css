@@ -87,7 +87,11 @@ div.banner {
 }
 
 .margin-bottom {
-    margin-bottom: 0.5em;
+    margin-bottom: 0.75em;
+}
+
+.margin-bottom-double {
+    margin-bottom: 1.25em!important;
 }
 
 .inventory-section {
@@ -535,6 +539,10 @@ div.img-overlay img {
     transition: all 150ms ease; 
 }
 
+div.related-products + div {
+    margin-bottom: 3em;
+}
+
 div.products > div.product {
     margin-bottom: 1.5em;
 }
@@ -871,6 +879,11 @@ div h5.footer-status {
 
     ul#menu-main-menu {
         font-size: 15px;
+    }
+
+    p, body {
+        font-size: 17px;
+        line-height: 1.55;
     }
 }
 

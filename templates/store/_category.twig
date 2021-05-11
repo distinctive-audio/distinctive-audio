@@ -40,25 +40,35 @@
                                         {% paginate craft.entries.relatedTo(category).limit(12) as products %}
                                         {% for product in products %}
 
-                                        <div class="col-xs-12 col-sm-6 col-md-4 product portfolio-content">
-                                                <div class="img-overlay">
-                                                    {% if product.newArrivalsImage | length %}
-                                                    <img src="{{ product.newArrivalsImage.one().getUrl('FourteenFortyTenEightyThumb') }}" alt="{{ product.title }}">
-                                                    {%  endif %}
-                                                    {% if product.tradeInsImage | length %}
-                                                    <img src="{{ product.tradeInsImage.one().getUrl('FourteenFortyTenEightyThumb') }}" alt="{{ product.title }}">
-                                                    {%  endif %}
-                                                    {% if product.specialsImage | length %}
-                                                    <img src="{{ product.specialsImage.one().getUrl('FourteenFortyTenEightyThumb') }}" alt="{{ product.title }}">
-                                                    {%  endif %}
-                                                    <a class="hover-plus" href="{{ product.url }}">
-                                                        <i class="fa fa-plus" aria-hidden="true"></i>
-                                                    </a>
-                                                </div>
-                                                <a href="{{ product.url }}">
-                                                    <h4 class="product-title">{{ product.title }}</h4>
-                                                    {# <p>{{ product.defaultPrice | currency('USD') }}</p> #}
+                                        <div class="row col-xs-12 col-sm-6 col-md-4 product portfolio-content">
+                                            {% if product.newArrivalsImage | length %}
+                                            <div class="img-overlay">
+                                                <img src="{{ product.newArrivalsImage.one().getUrl('FourteenFortyTenEightyThumb') }}" alt="{{ product.title }}">
+                                                <a class="hover-plus" href="{{ product.url }}">
+                                                    <i class="fa fa-plus" aria-hidden="true"></i>
                                                 </a>
+                                            </div>
+                                            {% endif %}
+                                            {% if product.tradeInsImage | length %}
+                                            <div class="img-overlay">
+                                                <img src="{{ product.tradeInsImage.one().getUrl('FourteenFortyTenEightyThumb') }}" alt="{{ product.title }}">
+                                                <a class="hover-plus" href="{{ product.url }}">
+                                                    <i class="fa fa-plus" aria-hidden="true"></i>
+                                                </a>
+                                            </div>
+                                            {% endif %}
+                                            {% if product.specialsImage | length %}
+                                            <div class="img-overlay">
+                                                <img src="{{ product.specialsImage.one().getUrl('FourteenFortyTenEightyThumb') }}" alt="{{ product.title }}">
+                                                <a class="hover-plus" href="{{ product.url }}">
+                                                    <i class="fa fa-plus" aria-hidden="true"></i>
+                                                </a>
+                                            </div>
+                                            {% endif %}
+                                            <a href="{{ product.url }}">
+                                                <h4 class="product-title">{{ product.title }}</h4>
+                                                {# <p>{{ product.defaultPrice | currency('USD') }}</p> #}
+                                            </a>
                                         </div>
 
                                         {% endfor %}

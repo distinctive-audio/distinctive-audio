@@ -1,8 +1,18 @@
-dateModified: 1606406675
+dateModified: 1620771395
 email:
-  fromEmail: sebastian.nadeau45@gmail.com
+  fromEmail: rheal@distinctiveaudio.ca
   fromName: 'Distinctive Audio'
-  transportType: craft\mail\transportadapters\Sendmail
+  replyToEmail: null
+  template: null
+  transportSettings:
+    encryptionMethod: tls
+    host: smtp.mailgun.org
+    password: 438a0443c9ec2b687d330b76faf8529c-77751bfc-d8fbd203
+    port: '587'
+    timeout: '10'
+    useAuthentication: '1'
+    username: postmaster@mg.distinctiveaudio.ca
+  transportType: craft\mail\transportadapters\Smtp
 graphql:
   publicToken:
     enabled: false
@@ -17,17 +27,13 @@ plugins:
       prependSender: ''
       prependSubject: ''
       successFlashMessage: 'Your message has been sent.'
-      toEmail: sebastian.nadeau45@gmail.com
+      toEmail: rheal@distinctiveaudio.ca
   contact-form-honeypot:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
     settings:
       honeypotParam: fromPhone
-  feed-me:
-    edition: standard
-    enabled: true
-    schemaVersion: 4.3.0
   redactor:
     edition: standard
     enabled: true
@@ -40,7 +46,7 @@ system:
   edition: solo
   live: true
   name: 'Distinctive Audio'
-  schemaVersion: 3.5.13
+  schemaVersion: 3.6.8
   timeZone: America/Los_Angeles
 users:
   allowPublicRegistration: false

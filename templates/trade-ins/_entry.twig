@@ -30,13 +30,13 @@
                       <h1>{{ entry.title }}</h1>
                     </div>
                 </div>
+                {% if entry.tradeInsImage | length %}
                 <div class="col-md-7">
-                    {% if entry.tradeInsImage | length %}
                     <div class="project-large-thumb img-responsive">
                         <img src="{{ entry.tradeInsImage.one().getUrl('FourteenFortyTenEightyThumb') }}" alt="{{ entry.title }}">
                     </div>
-                    {% endif %}
                 </div>
+                {% endif %}
                 <div class="col-sm-10 col-md-5">
                     <div class="project-details">
                         {% if entry.productDescription %}

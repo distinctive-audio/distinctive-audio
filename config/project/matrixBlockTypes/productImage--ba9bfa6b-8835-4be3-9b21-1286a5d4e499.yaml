@@ -41,7 +41,7 @@ fields:
     settings:
       allowedKinds:
         - image
-      defaultUploadLocationSource: 'volume:8f369514-5b46-49c6-9fd2-5db66f81e30e'
+      defaultUploadLocationSource: 'volume:8f369514-5b46-49c6-9fd2-5db66f81e30e' # Product Images
       defaultUploadLocationSubpath: ''
       limit: '1'
       localizeRelations: false
@@ -49,7 +49,7 @@ fields:
       selectionLabel: 'Add a product image'
       showUnpermittedFiles: false
       showUnpermittedVolumes: false
-      singleUploadLocationSource: 'volume:8f369514-5b46-49c6-9fd2-5db66f81e30e'
+      singleUploadLocationSource: 'volume:8f369514-5b46-49c6-9fd2-5db66f81e30e' # Product Images
       singleUploadLocationSubpath: ''
       source: null
       sources: '*'

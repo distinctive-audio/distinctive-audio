@@ -20,11 +20,7 @@
                 <!-- section title -->
                 <div class="col-sm-12 col-md-12">
                     <div class="sec-head text-left wow fadeInDown">
-                        <h1 class="h2">{{ entry.title }}</h1>
-                        <div class="row contact-form-info">
-                        <p class="col-md-7">{{ entry.description }}</p>
-                        </div>
-
+                        <h1 class="h2 margin-bottom-double">{{ entry.title }}</h1>
                         <!-- Inventory List on Sale -->
                         {% for block in entry.inventorySale.all() %}
                           {% if block.type == 'inventoryTable' %}
@@ -55,6 +51,10 @@
                         {% endfor %}
 
                         <!-- Business Hours -->
+                        <h1 class="h2">Get in Touch</h1>
+                          <div class="row contact-form-info">
+                          <p class="col-md-7">{{ entry.description }}</p>
+                        </div>
                         {% for entry in craft.entries.section('contact').limit(1).all() %}
                         <table class="table table-striped">
                           <thead>
@@ -117,7 +117,7 @@
                                         <i class="ion-ios-email-outline"></i>
                                     </div>
                                     <div class="media-body">
-                                        <p>rhealnadeau@live.com</p>
+                                        <p>rheal@distinctiveaudio.ca</p>
                                     </div>
                                 </div>
                             </div>

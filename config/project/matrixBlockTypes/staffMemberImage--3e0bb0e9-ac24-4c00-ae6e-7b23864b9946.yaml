@@ -62,7 +62,7 @@ fields:
     settings:
       allowedKinds:
         - image
-      defaultUploadLocationSource: 'volume:8f369514-5b46-49c6-9fd2-5db66f81e30e'
+      defaultUploadLocationSource: 'volume:8f369514-5b46-49c6-9fd2-5db66f81e30e' # Product Images
       defaultUploadLocationSubpath: ''
       limit: '1'
       localizeRelations: false
@@ -70,7 +70,7 @@ fields:
       selectionLabel: 'Add staff member image'
       showUnpermittedFiles: false
       showUnpermittedVolumes: false
-      singleUploadLocationSource: 'volume:66501f16-0793-48a0-a3d3-c417f87dd281'
+      singleUploadLocationSource: 'volume:66501f16-0793-48a0-a3d3-c417f87dd281' # Staff Members
       singleUploadLocationSubpath: ''
       source: null
       sources: '*'

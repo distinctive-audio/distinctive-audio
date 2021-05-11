@@ -27,6 +27,15 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            fieldUid: f541b1c1-b121-4c59-a4ec-dae0a312e66e
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
             fieldUid: 013b5064-e06b-4464-99dc-5c6736b1647c
             instructions: null
             label: null
@@ -49,7 +58,7 @@ fieldLayouts:
 handle: inventorySale
 hasTitleField: true
 name: 'Inventory Sale'
-section: 2460a09b-1b47-4ec1-8a88-08f3829af23b
+section: 2460a09b-1b47-4ec1-8a88-08f3829af23b # Inventory Sale
 sortOrder: 1
 titleFormat: '{section.name|raw}'
 titleTranslationKeyFormat: null
