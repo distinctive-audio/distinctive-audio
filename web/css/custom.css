@@ -781,6 +781,11 @@ div.img-right:hover span.post-cat a {
     color: #fff;   
 }
 
+.media-body, .media-left, .media-right {
+    display: table-cell;
+    vertical-align: middle;
+}
+
 /* FOOTER */
 
 div.widget-post {
