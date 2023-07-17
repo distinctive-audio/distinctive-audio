@@ -1,0 +1,121 @@
+{% extends "_layouts/main" %}
+{% block main %}
+       
+<div id="content" class="site-content">
+    <div id="primary" class="content-area">
+        <main id="main" class="site-main" role="main">
+            <!-- Home Slider -->
+            <section id="start">
+                <!-- slide item -->
+                <div class="banner" style="background-image:url({{ entry.bannerImage.one().getUrl() }})">
+                    <div class="slide-content-2 container">
+                    </div>
+                </div>
+                
+
+                <!-- // slide item -->
+            </section>
+            <!-- // Home Slider -->
+
+            <!--
+            Start Contact Section
+            ==================================== -->
+            <section id="contact" class="section">
+                <div class="container">
+                    <div class="row grid-blog">
+                        <!-- section title -->
+                        <div class="col-sm-12 col-md-12">
+                            <div class="sec-head text-left wow fadeInDown">
+                                <h1 class="h2">Thank You for Contacting Us</h1>
+                                <div class="contact-form-info">
+                                    <p>Thank you for sending that in {{ craft.app.request.getQueryParam('from') }}, we will get back to you shortly.</p>
+                                </div>
+                                <table class="table table-striped">
+                                  <thead>
+                                    <tr>
+                                      <th>Day of the Week</th>
+                                      <th>Hours</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    {% if entry.schedule | length %}
+                                    {% for row in entry.schedule %}
+                                    <tr>
+                                      <td>{{ row.day }}</td>
+                                      <td>{{ row.hours }}</td>
+                                    </tr>
+                                    {% endfor %}
+                                    {% endif %}
+                                  </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- /section title -->
+                      </div>
+
+
+                      <div class="row grid-blog wow fadeIn">
+                          <div class="col-sm-12 col-md-4">
+                              <h4 class="title-style">Our Address</h4>
+                              <div class="media">
+                                  <div class="media-left">
+                                      <i class="ion ion-map"></i>
+                                  </div>
+                                  <div class="media-body">
+                                      <p>903 Carling Ave. Ottawa Ontario <br> K1Y 4E3 Canada</p>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-sm-12 col-md-4">
+                              <h4 class="title-style">Call us</h4>
+                              <div class="media">
+                                  <div class="media-left">
+                                      <i class="ion-ios-telephone-outline"></i>
+                                  </div>
+                                  <div class="media-body">
+                                      <a href="tel:+16137226902"><p>(613) 722-6902</p></a>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-sm-12 col-md-4">
+                              <h4 class="title-style">Mail Us</h4>
+                              <div class="media">
+                                  <div class="media-left">
+                                      <i class="ion-ios-email-outline"></i>
+                                  </div>
+                                  <div class="media-body">
+                                      <p>rheal@distinctiveaudio.ca</p>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                </div>      <!-- End container -->
+            </section>
+            <!--
+            end Contact Section
+            ==================================== -->
+
+            <!-- Widget Section -->
+            
+            <section class="container-fluid google-map">
+                <div class="row">
+                    <div class="col-12">
+                        <!-- MAP -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- <section class="map-wrapper">
+                <div class="wow fadeIn">
+                    <div id="map-canvas"></div>
+                </div>
+            </section> -->
+
+        </main>
+        <!-- // #main -->
+    </div>
+    <!-- // #primary -->
+</div>
+<!-- // #content -->
+        
+{% endblock %}

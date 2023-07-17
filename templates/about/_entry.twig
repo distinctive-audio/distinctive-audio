@@ -1,0 +1,249 @@
+{% extends "_layouts/main" %}
+{% block main %}
+
+
+<div id="content" class="site-content">
+    <div id="primary" class="content-area">
+        <main id="main" class="site-main" role="main">
+            <!-- Home Slider -->
+            <section id="start">
+                <!-- slide item -->
+                <div class="banner" style="background-image:url({{ entry.bannerImage.one().getUrl() }})">
+                    <div class="slide-content container">
+                    <div class="slide-content-2 container">
+                    </div>
+                </div>
+                <!-- // slide item -->
+            </section>
+            <!-- // Home Slider -->
+
+            <!--
+            Start About Section
+            ==================================== -->
+            <section id="about" class="section">
+                <div class="container">
+                    <div class="row">
+                        <!-- section title -->
+                        <div class="col-sm-12 col-md-8">
+                            <div class="sec-head text-left wow fadeIn">
+                                <h1 class="h2">About Distinctive Audio</h1>
+                                <p>{{ entry.description }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--
+            end About Section
+            ==================================== -->
+
+            <!--
+            Start Service Section
+            ==================================== -->
+            <section id="service" class="section bg-one">
+                <div class="container">
+                    <div class="row">
+                        <!-- section title -->
+                        <div class="col-sm-12 col-md-12">
+                            <div class="sec-head text-left wow fadeIn">
+                                <h2>Our Services</h2>
+                                <div class="row">
+                                <p class="col-md-7">{{ entry.ourServices }}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /section title -->
+
+                        <!-- Service item -->
+                        <div class="col-sm-6 col-md-4 wow fadeInUp">
+                            <div class="service-item">                            
+                                <div class="icon-box text-center">
+                                    <i class="ion-ios-musical-notes"></i>
+                                </div>                  
+                                <!-- Express Service Yourself -->
+                                <div class="service-text">
+                                    <h4 class="text-center">Listening Demos</h4>                   
+                                    <p>{{ entry.listeningDemos }}</p>
+                                </div>
+                            </div>
+                        </div> 
+                        <!-- End Service item -->
+
+                        <!-- Service item -->
+                        <!-- {#
+                        <div class="col-sm-6 col-md-3 wow fadeInUp" data-wow-delay="0.3s">
+                            <div class="service-item">
+                                <div class="icon-box text-center">
+                                    <i class="ion-ios-gear-outline"></i>
+                                </div> -->
+                                <!-- Express Service Yourself -->
+                                <!-- <div class="service-text">
+                                    <h4 class="text-center">Equipment Repair</h4>
+                                    <p>{{ entry.equipmentRepair }}</p>
+                                </div>
+                            </div>
+                        </div> #} -->
+                        <!-- End Service item -->
+
+                        <!-- Service item -->
+                        <div class="col-sm-6 col-md-4 wow fadeInUp" data-wow-delay="0.6s">
+                            <div class="service-item">
+                                <div class="icon-box text-center">
+                                    <i class="ion-ios-ionic-outline"></i>
+                                </div>
+                                <!-- Express Service Yourself -->
+                                <div class="service-text">
+                                    <h4 class="text-center">Custom Cables</h4>
+                                    <p>{{ entry.customCables }}</p>
+                                </div>
+                            </div>
+                        </div> 
+                        <!-- End Service item -->
+
+                        <!-- Service item -->
+                        <div class="col-sm-6 col-md-4 wow fadeInUp" data-wow-delay="0.9s">
+                            <div class="service-item">
+                                <div class="icon-box text-center">
+                                    <i class="ion-ios-barcode-outline"></i>
+                                </div>
+                                <!-- Express Service Yourself -->
+                                <div class="service-text">
+                                    <h4 class="text-center">Tube Testing</h4>
+                                    <p>{{ entry.tubeTesting }}</p>
+                                </div>
+                            </div>
+                        </div> 
+                        <!-- End Service item -->
+
+                    </div>      <!-- End row -->
+                </div>      <!-- End container -->
+            </section>
+            <!--
+            end Service Section
+            ==================================== -->
+
+            <!--
+            Store Slider
+            ====================================
+            <section id="start">
+                <div class="home-slider"> -->
+                    <!-- slide item
+                    <div class="slide-item" style="background-image: url(<?php /* echo get_template_directory_uri(); ?>/img/slider/slide5.jpg)">
+                        <div class="slide-content container">
+                            <div class="inner-content text-">
+                                <h3>The Storefront</h3>
+                                <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br class="hidden-xs"> Molestias adipisci, voluptatem maiores soluta odio, <br class="hidden-xs"> deserunt suscipit.</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // slide item 
+                    <!-- slide item
+                    <div class="slide-item item2" style="background-image: url(<?php echo get_template_directory_uri(); */ ?>/img/slider/slide6.jpg)">
+                        <div class="slide-content container">
+                            <div class="inner-content text-">
+                                <h3>Inside The Store</h3>
+                                <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br class="hidden-xs"> Molestias adipisci, voluptatem maiores soluta odio, <br class="hidden-xs"> deserunt suscipit.</h4>
+                            </div>
+                        </div>
+                    </div> -->
+                    <!-- slide item
+                </div>
+            </section> -->
+            <!--
+            Store Slider
+            ==================================== -->
+
+                        <!--
+            Start Team Section
+            ==================================== -->
+            <section id="team" class="section">
+                <div class="container">
+                    <div class="row">
+                        <!-- section title -->
+                        <div class="col-sm-12 col-md-12">
+                            <div class="sec-head text-left wow fadeIn" >
+                                <h2>The Owner &amp; President of Distinctive Audio Inc.</h2>
+                                <div class="row">
+                                <p class="col-md-7">{{ entry.staffMembers }}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /section title -->
+
+                        <!-- team member -->
+                        <div class="col-sm-6 col-md-3 wow fadeInUp">
+                          {% for block in entry.staffMemberImage.all() %}
+                          {% if block.type == 'staffMemberImage' %}
+                            <div class="team-mate">
+                                <figure class="member-photo">
+                                    <!-- member photo -->
+                                    <img class="img-responsive" src="{{ block.staffMemberImage.one().getUrl() }}" alt="{{ block.staffMemberName }}">
+                                    <!-- /member photo -->
+                                </figure>
+
+                                <!-- member name -->
+                                <div class="member-title">
+                                    <h4>{{ block.staffMemberName }}</h4>
+                                    <span>{{ block.staffMemberOccupation }}</span>
+                                </div>
+                                <!-- /member name -->
+                           </div>
+                          {% endif %}
+                          {% endfor %}
+                        </div>
+                        <!-- // team member -->
+
+                        <!-- team member -->
+                        <!--
+                        <div class="col-sm-6 col-md-3 wow fadeInUp" data-wow-delay="0.3s">
+                            <div class="team-mate">
+                                <figure class="member-photo"> -->
+                                    <!-- member photo -->
+                                    <!--
+                                    <img alt="" src="<?php /* echo get_template_directory_uri(); */ ?>/img/team/team2.png" class="img-responsive"> -->
+                                    <!-- /member photo -->
+                                <!--
+                                </figure> -->
+
+                                <!-- member name -->
+                                <!--
+                                <div class="member-title">
+                                    <h4>Brian</h4>
+                                    <span>Management</span>
+                                </div>
+                           </div>
+                        </div> -->
+                        <!-- // team member -->
+
+                    </div>
+                </div>
+            </section>
+            <!--
+            end Team Section
+            ==================================== -->
+
+            <!--
+            call to action
+            ==================================== -->
+            <section class="section call-to-action">
+                <div class="container">
+                    <div class="cta">
+                        <h2>Interested in Learning More About Distinctive Audio?</h2>
+                        <div class="btn-set">
+                            <a href="/contact" class="btn btn-contact">Get in Touch</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--
+            end call to action
+            ==================================== -->
+
+        </main>
+        <!-- // #main -->
+    </div>
+    <!-- // #primary -->
+</div>
+<!-- // #content -->
+
+{% endblock %}

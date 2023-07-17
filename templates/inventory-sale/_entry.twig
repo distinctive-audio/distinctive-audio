@@ -1,0 +1,225 @@
+{% extends "_layouts/main" %}
+{% block main %}
+       
+<div id="content" class="site-content">
+    <div id="primary" class="content-area">
+        <main id="main" class="site-main" role="main">
+            <!-- Home Slider -->
+            <section id="start">
+                <!-- slide item -->
+                <div class="banner" style="background-image:url({{ entry.bannerImage.one().getUrl() }})">
+                    <div class="slide-content-2 container">
+                    </div>
+                </div>
+                <!-- // slide item -->
+            </section>
+            <!-- // Home Slider -->
+
+            <section class="container inventory-section">
+              <div class="row">
+                <!-- section title -->
+                <div class="col-sm-12 col-md-12">
+                    <div class="sec-head text-left wow fadeInDown">
+                        <h1 class="h2 margin-bottom-double">{{ entry.title }}</h1>
+
+                        <!-- Inventory List on Sale -->
+                        {% for block in entry.inventorySale.all() %}
+                          {% if block.type == 'inventoryTable' %}
+                            {% if block.inventorySection %}
+                              <h3 class="inventory-announcements">{{ block.inventorySection }}</h3>
+                            {% endif %}
+                            {% if block.inventoryAnnouncements %}
+                              {{ block.inventoryAnnouncements }}
+                            {% endif %}
+                            {% if block.inventoryTable %}
+                              <table class="table table-striped inventory-sale-list">
+                                <thead>
+                                  <tr>
+                                  {% for col in block.inventoryTable.columns %}
+                                    <th align="{{ col.align }}" width="{{ col.width }}">{{ col.heading }}</th>
+                                  {% endfor %}
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  {% for row in block.inventoryTable.rows %}
+                                  <tr>
+                                  {% for cell in row %}
+                                    <td align="{{ block.inventoryTable.columns[loop.index0].align }}">{{ cell }}</td>
+                                  {% endfor %}
+                                  </tr>
+                                {% endfor %}
+                                </tbody>
+                              </table>
+                            {% endif %}
+                          {%  endif %}
+                        {% endfor %}
+
+                        <!-- Business Hours -->
+                        <h1 class="h2">Get in Touch</h1>
+                          <div class="row contact-form-info">
+                          <p class="col-md-7">{{ entry.description }}</p>
+                        </div>
+                        {% for entry in craft.entries.section('contact').limit(1).all() %}
+                        <table class="table table-striped">
+                          <thead>
+                            <tr>
+                              <th>Day of the Week</th>
+                              <th>Hours</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            {% if entry.schedule | length %}
+                            {% for row in entry.schedule %}
+                            <tr>
+                              <td>{{ row.day }}</td>
+                              <td>{{ row.hours }}</td>
+                            </tr>
+                            {% endfor %}
+                            {% endif %}
+                          </tbody>
+                        </table>
+                        {%  endfor %}
+                    </div>
+                </div>
+                <!-- /section title -->
+              </div>
+            </section>
+
+            <!--
+            Start Contact Section
+            ==================================== -->
+            <section id="contact" class="inventory-sale-contact">
+                <div class="container">
+                    <div class="row grid-blog">
+                        <div class="col-sm-4 col-md-4 wow fadeIn">
+                            <div class="contact-block">
+                                <h4 class="title-style">Our Address</h4>
+                                <div class="media">
+                                    <div class="media-left">
+                                        <i class="ion ion-map"></i>
+                                    </div>
+                                    <div class="media-body">
+                                        <p>903 Carling Ave. Ottawa Ontario <br> K1Y 4E3 Canada</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="contact-block">
+                                <h4 class="title-style">Call us</h4>
+                                <div class="media">
+                                    <div class="media-left">
+                                        <i class="ion-ios-telephone-outline"></i>
+                                    </div>
+                                    <div class="media-body">
+                                        <a href="tel:+16137226902"><p>(613) 722-6902</p></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="contact-block">
+                                <h4 class="title-style">Mail Us</h4>
+                                <div class="media">
+                                    <div class="media-left">
+                                        <i class="ion-ios-email-outline"></i>
+                                    </div>
+                                    <div class="media-body">
+                                        <p>rheal@distinctiveaudio.ca</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-8 col-md-8 wow fadeIn">
+
+                            <!-- <form action="#" class="contact-form">
+                                <div class="row">
+                                    <div class="col-sm-6 input-wrap">
+                                        <input type="text" name="name" placeholder="Name" class="form-control input-field">
+                                    </div>
+                                    <div class="col-sm-6 input-wrap">
+                                        <input type="email" name="email" placeholder="Email" class="form-control input-field">
+                                    </div>
+                                    <div class="col-sm-12 input-wrap">
+                                        <input type="text" name="subject" placeholder="Subject" class="form-control input-field">
+                                    </div>
+                                    <div class="col-sm-12 input-wrap">
+                                        <textarea name="message" placeholder="Message" class="form-control input-field"></textarea>
+                                    </div>
+                                    <div class="col-sm-12 text-right">
+                                        <button type="submit" class="btn btn-main btn-shadow shutter-both">Send Message</button>
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <div class="success">Your message was sent successfully.</div>
+                                        <div class="error">Something is wrong, please try again.</div>
+                                    </div>
+                                </div>
+                            </form> -->
+
+
+                            {% macro errorList(errors) %}
+                                {% if errors %}
+                                    <ul class="errors">
+                                        {% for error in errors %}
+                                            <li class="alert alert-danger">{{ error }}</li>
+                                        {% endfor %}
+                                    </ul>
+                                {% endif %}
+                            {% endmacro %}
+
+                            {% from _self import errorList %}
+
+                            <form method="post" action="" accept-charset="UTF-8" class="contact-form">
+                              <div class="row">
+                                {{ csrfInput() }}
+                                <input type="hidden" name="action" value="contact-form/send">
+                                {{ redirectInput('contact/thanks?from={fromName}') }}
+
+                                <div class="col-sm-6 input-wrap">
+                                  <h3 class="hidden"><label for="from-name" class="hidden">Name</label></h3>
+                                  <input id="from-name" type="text" name="fromName" value="{{ message.fromName ?? '' }}" placeholder="Name" class="form-control input-field">
+                                  {{ message is defined and message ? errorList(message.getErrors('fromName')) }}
+                                </div>
+
+                                <div class="col-sm-6 input-wrap">
+                                  <h3 class="hidden"><label for="from-email" class="hidden">Email</label></h3>
+                                  <input id="from-email" type="email" name="fromEmail" value="{{ message.fromEmail ?? '' }}" placeholder="Email" class="form-control input-field">
+                                  {{ message is defined and message ? errorList(message.getErrors('fromEmail')) }}
+                                </div>
+
+                                <div class="col-sm-12 input-wrap hidden">
+                                  <h3 class="hidden"><label for="fromPhone" class="hidden">Phone</label></h3>
+                                  <input id="fromPhone" name="fromPhone" type="text" placeholder="Phone" class="form-control input-field">
+                                </div>
+
+                                <div class="col-sm-12 input-wrap">
+                                  <h3 class="hidden"><label for="subject" class="hidden">Subject</label></h3>
+                                  <input id="subject" type="text" name="subject" value="{{ message.subject ?? '' }}" placeholder="Subject" class="form-control input-field">
+                                  {{ message is defined and message ? errorList(message.getErrors('subject')) }}
+                                </div>
+
+                                <div class="col-sm-12 input-wrap">
+                                  <h3 class="hidden"><label for="message" class="hidden">Message</label></h3>
+                                  <textarea rows="10" cols="40" id="message" name="message" placeholder="Message" class="form-control input-field">{{ message.message ?? '' }}</textarea>
+                                  {{ message is defined and message ? errorList(message.getErrors('message')) }}
+                                </div>
+                                  
+                                <div class="col-sm-12 text-right">
+                                  <button type="submit" class="btn btn-main shutter-both">Send Message</button>
+                                </div>
+                              </div>
+                            </form>
+                        </div>
+
+                    </div>      <!-- End row -->
+                </div>      <!-- End container -->
+            </section>
+            <!--
+            end Contact Section
+            ==================================== -->
+
+        </main>
+        <!-- // #main -->
+    </div>
+    <!-- // #primary -->
+</div>
+<!-- // #content -->
+        
+{% endblock %}

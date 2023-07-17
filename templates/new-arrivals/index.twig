@@ -1,0 +1,114 @@
+{% extends "_layouts/main" %}
+{% block main %}
+       
+<div id="content" class="site-content">
+    <div id="primary" class="content-area">
+        <main id="main" class="site-main" role="main">
+            <!-- Home Slider -->
+            <section id="start">
+                <!-- slide item -->
+                <div class="banner" style="background-image:url({{ entry.bannerImage.one().getUrl() }})">
+                </div>
+                <!-- // slide item -->
+            </section>
+            <!-- // Home Slider -->
+
+            <!--
+            Start Portsolio Section
+            ==================================== -->
+            <section id="portfolio" class="section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-8 col-md-8 col-lg-9">
+                            <div class="sec-head text-left wow fadeInDown">
+                                <div class="page-header">
+                                    <h1>New Arrivals</h1>
+                                </div>
+                                <p>We offer the finest audio components, cables, and accessories from well-known and highly-regarded manufacturers from all over the world. The companies we represent are dedicated to the noble pursuit of producing equipment that is designed and engineered to be faithful to the music.</p>
+                                <p>We have chosen to feature only a small sample of the products that we have in stock. In addition to the products featured on the website, we have a larger inventory at the store.</p>
+                            </div>
+
+                            <div class="row products">
+
+                                {% paginate craft.entries.type('newArrivals').limit(12) as products %}
+                                {% for product in products %}
+
+                                <div class="col-xs-12 col-sm-6 col-md-4 product portfolio-content">
+                                        {% if product.newArrivalsImage | length %}
+                                        <div class="img-overlay">
+                                            <img src="{{ product.newArrivalsImage.one().getUrl('FourteenFortyTenEightyThumb') }}" alt="{{ product.title }}">
+                                            <a class="hover-plus" href="{{ product.url }}">
+                                                <i class="fa fa-plus" aria-hidden="true"></i>
+                                            </a>
+                                        </div>
+                                        {% endif %}
+                                        <a href="{{ product.url }}">
+                                            <h4 class="product-title">{{ product.title }}</h4>
+                                            {# <p>{{ product.defaultPrice | currency('USD') }}</p> #}
+                                        </a>
+                                </div>
+
+                                {% endfor %}
+
+                            </div>
+
+                            <nav class="post-pagination margin-top wow fadeInDown"  data-wow-duration="1000ms" data-wow-delay="300ms">
+
+                                <!-- /.pagination -->
+                                <ul class="pagination">
+                                  {% if paginate.prevUrl %}
+                                    <li><a href="{{ paginate.prevUrl }}">Previous</a></li>
+                                  {% endif %}
+                                      
+                                  {% for page, url in paginate.getPrevUrls(3) %}
+                                      <li><a href="{{ url }}">{{ page }}</a></li>
+                                  {% endfor %}
+
+                                  <li class="active current-page">{{ paginate.currentPage }}</li>
+
+                                  {% for page, url in paginate.getNextUrls(3) %}
+                                      <li><a href="{{ url }}">{{ page }}</a></li>
+                                  {% endfor %}
+
+                                  {% if paginate.nextUrl %}
+                                    <li><a href="{{ paginate.nextUrl }}">Next</a></li>
+                                  {% endif %}
+                                </ul>
+                            </nav>
+                        </div>
+
+                        {% include '_includes/sidebar' %}
+                    </div>
+                </div>
+            </section>
+            <!--
+            end Portfolio Section
+            ==================================== -->
+
+
+            <!--
+            call to action
+            ==================================== -->
+            <section class="section call-to-action">
+                <div class="container">
+                    <div class="cta">
+                        <h2>Need to Make a Special Order?</h2>
+                        <div class="btn-set">
+                            <a href="/contact" class="btn btn-contact">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--
+            end call to action
+            ==================================== -->
+
+        </main>
+        <!-- // #main -->
+    </div>
+    <!-- // #primary -->
+</div>
+<!-- // #content -->
+
+
+{% endblock %}

@@ -1,0 +1,90 @@
+{% extends "_layouts/main" %}
+{% block main %}
+       
+<div id="content" class="site-content">
+  <div id="primary" class="content-area">
+      <main id="main" class="site-main" role="main">
+          <!-- Home Slider -->
+          <section id="start">
+              <!-- slide item -->
+              <div class="banner" style="background-image:url({{ entry.bannerImage.one().getUrl() }})">
+              </div>
+              <!-- // slide item -->
+          </section>
+          <!-- // Home Slider -->
+          <!--
+          Start Portsolio Section
+          ==================================== -->
+          <section id="portfolio" class="section">
+              <div class="container">
+                  <div class="row">
+                      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                          <div class="row">
+
+                              <div class="col-xs-12 col-md-9 sec-head text-left wow fadeInDown">
+
+                                  <div class="page-header">
+                                      <h1>Lines We Carry</h1>
+                                  </div>
+
+                                  <p>{{ entry.description }}</p>
+
+                              </div>
+
+                              <div class="col-sm-12 col-md-12 col-lg-12">
+
+                                      <!-- LINES WE CARRY – BRANDS -->
+
+                                      <div class="row brands">
+
+                                          {% for block in entry.brands.all() %}
+                                          {% if block.type == 'brandLogo' %}
+
+                                          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 product">
+                                              <div class="portfolio-content img-overlay">
+                                                  <a target="_blank" href="{{ block.brandLink }}">
+                                                      <img src="{{ block.brandLogo.one().getUrl() }}" alt="{{ block.altField }}">
+                                                  </a>
+                                              </div>
+                                          </div>
+
+                                          {% endif %}
+                                          {% endfor %}
+
+                                      </div>
+                                      
+                                  </div>
+                              </div>
+                          </div>
+                  </div>
+              </div>
+          </section>
+          <!--
+          end Portfolio Section
+          ==================================== -->
+          
+          <!--
+          call to action
+          ==================================== -->
+          <section class="section call-to-action">
+              <div class="container">
+                  <div class="cta">
+                      <h2>Need to Make a Special Order?</h2>
+                      <div class="btn-set">
+                          <a href="/contact" class="btn btn-contact">Contact Us</a>
+                      </div>
+                  </div>
+              </div>
+          </section>
+          <!--
+          end call to action
+          ==================================== -->
+          
+      </main>
+      <!-- // #main -->
+  </div>
+  <!-- // #primary -->
+</div>
+<!-- // #content -->
+
+{% endblock %}
