@@ -1,0 +1,116 @@
+field: c057b053-4155-4d39-bb1b-51c48091561c # Inventory Sale
+fieldLayouts:
+  d9f567cf-3801-4811-9ab8-f97427e265bb:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 0a7cb1ae-b730-4b9d-8de3-31f622be61e1 # Inventory Section
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 2d029e95-45c9-43b1-a379-374792a66bb8
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 0577a5d0-62be-4944-ba86-f183c589c93a # Inventory Announcements
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5b7c6e0c-f84a-462b-b784-0bb5f610cc46
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 85e155b1-ff4f-4a9e-a292-00163653b845 # Inventory Table
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e83130f4-bebc-46ed-b87d-ea2faa840120
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 61eef30a-4164-4899-bc00-46303d465785
+        userCondition: null
+fields:
+  0a7cb1ae-b730-4b9d-8de3-31f622be61e1: # Inventory Section
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: inventorySection
+    instructions: 'Add inventory section'
+    name: 'Inventory Section'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: 'Add inventory section.'
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  85e155b1-ff4f-4a9e-a292-00163653b845: # Inventory Table
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: inventoryTable
+    instructions: 'Enter inventory items on sale'
+    name: 'Inventory Table'
+    searchable: false
+    settings:
+      columnsAddRowLabel: 'Add a column'
+      columnsInstructions: 'Add an inventory category column'
+      columnsLabel: 'Add a category'
+      rowsAddRowLabel: 'Add a row'
+      rowsInstructions: 'Add an inventory item row'
+      rowsLabel: 'Add an item'
+    translationKeyFormat: null
+    translationMethod: none
+    type: verbb\tablemaker\fields\TableMakerField
+  0577a5d0-62be-4944-ba86-f183c589c93a: # Inventory Announcements
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: inventoryAnnouncements
+    instructions: 'Add inventory section announcements'
+    name: 'Inventory Announcements'
+    searchable: true
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: null
+      purifyHtml: true
+      redactorConfig: null
+      removeEmptyTags: true
+      removeInlineStyles: true
+      removeNbsp: true
+      showHtmlButtonForNonAdmins: false
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      uiMode: enlarged
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
+handle: inventoryTable
+name: 'Inventory Table'
+sortOrder: 1

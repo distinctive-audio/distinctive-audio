@@ -1,0 +1,16 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: b406058a-faea-4d8a-af1c-c58f1515c881 # Home
+handle: staffMemberImage
+instructions: 'Add staff member'
+name: 'Staff Member Image'
+searchable: true
+settings:
+  contentTable: '{{%matrixcontent_staffmemberimage}}'
+  maxBlocks: null
+  minBlocks: null
+  propagationKeyFormat: null
+  propagationMethod: all
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

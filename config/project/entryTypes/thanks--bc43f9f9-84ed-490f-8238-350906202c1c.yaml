@@ -1,0 +1,67 @@
+fieldLayouts:
+  ea811d81-10eb-477b-a54a-53fb3ee43a27:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: Title
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: fdd50d1d-81ed-4f36-a3a6-95866830dc90
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 013b5064-e06b-4464-99dc-5c6736b1647c # Banner Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 32c40a28-bfee-474e-8c36-dbc7b33b4a2a
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 8a1fe93d-b584-4313-8ffe-97e79c98c562 # Schedule
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e5e8f557-8e93-45cb-a758-2f4bd704c058
+            userCondition: null
+            warning: null
+            width: 100
+        name: 'Thank You'
+        uid: cfa318d5-efd0-4843-a319-3e989a871b4f
+        userCondition: null
+handle: thanks
+hasTitleField: true
+name: 'Thank You'
+section: 457e7f25-eb5d-4d55-a592-75d06bb9d2c9 # Thank You
+sortOrder: 1
+titleFormat: '{section.name|raw}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: ''

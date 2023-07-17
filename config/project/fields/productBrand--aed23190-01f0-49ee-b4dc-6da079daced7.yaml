@@ -1,0 +1,23 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: ac92f2e6-6c48-48a5-bbbc-1d5cc82fb563 # Common
+handle: productBrand
+instructions: 'Select type of brand'
+name: 'Product Brand'
+searchable: true
+settings:
+  allowSelfRelations: false
+  branchLimit: null
+  localizeRelations: false
+  maintainHierarchy: true
+  maxRelations: null
+  minRelations: null
+  selectionLabel: 'Select type of brand'
+  showSiteMenu: true
+  source: 'group:1dff14a0-d227-444f-800f-5ac052fdc27d' # Brand
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Categories

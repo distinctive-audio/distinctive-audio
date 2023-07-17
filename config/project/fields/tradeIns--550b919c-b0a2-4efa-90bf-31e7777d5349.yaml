@@ -1,0 +1,19 @@
+columnSuffix: null
+contentColumnType: text
+fieldGroup: b406058a-faea-4d8a-af1c-c58f1515c881 # Home
+handle: tradeIns
+instructions: 'Enter trade ins description'
+name: 'Trade Ins'
+searchable: true
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: null
+  initialRows: 4
+  multiline: true
+  placeholder: 'Enter trade ins description.'
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

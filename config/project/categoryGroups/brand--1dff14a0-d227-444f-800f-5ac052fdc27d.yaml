@@ -1,0 +1,58 @@
+defaultPlacement: end
+fieldLayouts:
+  c930402b-e20f-45c9-bd1e-ec75c3626910:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\TitleField
+            uid: 85ce9245-72f9-465a-b384-847eb24cadf6
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: f541b1c1-b121-4c59-a4ec-dae0a312e66e # Description
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 11466c2e-a741-4fa9-9385-ce554de35a30
+            userCondition: null
+            warning: null
+            width: 100
+        name: 'Brand Category'
+        uid: 137f368d-3d16-4359-b36c-894351f360bd
+        userCondition: null
+handle: brand
+name: Brand
+siteSettings:
+  a16b48a6-e0e5-4d2b-8af7-97f71004a903: # Distinctive Audio
+    hasUrls: true
+    template: store/_category
+    uriFormat: '{% if parent %}{{ parent.uri }}{% endif %}/{slug}'
+structure:
+  maxLevels: null
+  uid: cd32142b-ae28-4e58-8e73-9e285a1842fb

@@ -1,0 +1,128 @@
+field: a9ad7290-97e7-4a45-aa4b-a085c5050332 # Brands
+fieldLayouts:
+  0d4eeb1c-a6f9-42e3-a88f-9c82bca8e033:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 4ae1a81a-56e1-40ce-89d2-dbc006382d5e # Brand Logo
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7ae3577e-39bd-4075-b5d0-e5e094480999
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: b440f215-9400-4161-af1f-3fdcfbcc5ec4 # Alt Field
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a10fc036-19d7-414d-a4d7-e7a2549837e0
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 4424988d-4e34-40a6-98fb-0daf0428595a # Brand Link
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 260fe06c-bd05-4fda-9b63-bdde7d64a597
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: ef2ca660-6cc4-4b97-8d79-45bcafdd5113
+        userCondition: null
+fields:
+  4ae1a81a-56e1-40ce-89d2-dbc006382d5e: # Brand Logo
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: brandLogo
+    instructions: 'Select brand logo'
+    name: 'Brand Logo'
+    searchable: true
+    settings:
+      allowSelfRelations: false
+      allowSubfolders: false
+      allowUploads: true
+      allowedKinds:
+        - image
+      branchLimit: null
+      defaultUploadLocationSource: 'volume:8f369514-5b46-49c6-9fd2-5db66f81e30e' # Product Images
+      defaultUploadLocationSubpath: null
+      localizeRelations: false
+      maintainHierarchy: false
+      maxRelations: 1
+      minRelations: null
+      previewMode: full
+      restrictFiles: true
+      restrictLocation: true
+      restrictedDefaultUploadSubpath: null
+      restrictedLocationSource: 'volume:e7e0da6f-770c-47f4-a2a0-4753bc1b4850' # Brand Logos
+      restrictedLocationSubpath: null
+      selectionLabel: 'Select a brand logo'
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      sources: '*'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: large
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  4424988d-4e34-40a6-98fb-0daf0428595a: # Brand Link
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: brandLink
+    instructions: 'Enter manufacturer''s website'
+    name: 'Brand Link'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: 'Enter manufacturer''s website.'
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  b440f215-9400-4161-af1f-3fdcfbcc5ec4: # Alt Field
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: altField
+    instructions: 'Enter manufacturer''s name'
+    name: 'Alt Field'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: 'Enter manufacturer''s name.'
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: brandLogo
+name: 'Brand Logo'
+sortOrder: 1

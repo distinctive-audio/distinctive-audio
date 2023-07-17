@@ -1,0 +1,79 @@
+fieldLayouts:
+  62d6ac19-6076-4edb-aeda-a6dc63aae847:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: Title
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 6c9c5aed-675f-4e10-9f20-dd70dbbd89cc
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 013b5064-e06b-4464-99dc-5c6736b1647c # Banner Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8d9356c9-7cdf-4398-946b-5a521bb9997d
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: f541b1c1-b121-4c59-a4ec-dae0a312e66e # Description
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a7c8ea33-c751-4cc7-8d23-17da813f4901
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 8a1fe93d-b584-4313-8ffe-97e79c98c562 # Schedule
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 740fb501-918c-4efa-b853-ef580ec19b76
+            userCondition: null
+            warning: null
+            width: 100
+        name: Contact
+        uid: fdbea673-32f4-4b7f-9842-e141a2885918
+        userCondition: null
+handle: contact
+hasTitleField: true
+name: Contact
+section: 8ce95efd-5e56-4aaf-a893-a092eab8c61b # Contact
+sortOrder: 1
+titleFormat: '{section.name|raw}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: ''

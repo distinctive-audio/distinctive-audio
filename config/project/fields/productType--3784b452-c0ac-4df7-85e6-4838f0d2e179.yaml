@@ -1,0 +1,23 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: ac92f2e6-6c48-48a5-bbbc-1d5cc82fb563 # Common
+handle: productType
+instructions: 'Select type of product'
+name: 'Product Type'
+searchable: true
+settings:
+  allowSelfRelations: false
+  branchLimit: null
+  localizeRelations: false
+  maintainHierarchy: true
+  maxRelations: null
+  minRelations: null
+  selectionLabel: 'Select type of product'
+  showSiteMenu: true
+  source: 'group:bd21f847-bc85-4d4d-ad12-2cdde91e2161' # Product
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Categories

@@ -1,0 +1,128 @@
+field: 6a913914-bdde-4106-89c6-7c202839dfbe # Staff Member Image
+fieldLayouts:
+  308fe65d-c68a-4109-9bec-a8e9f6f000a7:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: d4abbd3f-cf1e-4be5-a393-09cb07079e8e # Staff Member Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ea714759-da5c-4202-a2c8-8512af01a197
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: cb11528e-3c70-4310-a650-9489ab6cab2a # Staff Member Name
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b2feedf9-5324-4838-8761-1100495ac12c
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 5f49df0f-6f46-4dbd-af5b-903eb9c262e3 # Staff Member Occupation
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f8af75b4-0631-48e5-a795-57e33f148777
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 3f1a6f5d-4318-425f-8f4e-2c9cf7eab403
+        userCondition: null
+fields:
+  5f49df0f-6f46-4dbd-af5b-903eb9c262e3: # Staff Member Occupation
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: staffMemberOccupation
+    instructions: 'Enter staff member occupation'
+    name: 'Staff Member Occupation'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: 'Enter staff member occupation.'
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  cb11528e-3c70-4310-a650-9489ab6cab2a: # Staff Member Name
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: staffMemberName
+    instructions: 'Enter staff member name'
+    name: 'Staff Member Name'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: 'Enter staff member name.'
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  d4abbd3f-cf1e-4be5-a393-09cb07079e8e: # Staff Member Image
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: staffMemberImage
+    instructions: 'Select staff member image'
+    name: 'Staff Member Image'
+    searchable: true
+    settings:
+      allowSelfRelations: false
+      allowSubfolders: false
+      allowUploads: true
+      allowedKinds:
+        - image
+      branchLimit: null
+      defaultUploadLocationSource: 'volume:8f369514-5b46-49c6-9fd2-5db66f81e30e' # Product Images
+      defaultUploadLocationSubpath: null
+      localizeRelations: false
+      maintainHierarchy: false
+      maxRelations: 1
+      minRelations: null
+      previewMode: full
+      restrictFiles: true
+      restrictLocation: true
+      restrictedDefaultUploadSubpath: null
+      restrictedLocationSource: 'volume:66501f16-0793-48a0-a3d3-c417f87dd281' # Staff Members
+      restrictedLocationSubpath: null
+      selectionLabel: 'Add staff member image'
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      sources: '*'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: large
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+handle: staffMemberImage
+name: 'Staff Member Image'
+sortOrder: 1

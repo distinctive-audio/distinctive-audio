@@ -1,0 +1,19 @@
+columnSuffix: null
+contentColumnType: text
+fieldGroup: ac92f2e6-6c48-48a5-bbbc-1d5cc82fb563 # Common
+handle: suggestedRetailPrice
+instructions: 'Enter in manufacturers suggested retail price'
+name: 'Suggested Retail Price'
+searchable: true
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: null
+  initialRows: 4
+  multiline: false
+  placeholder: 'Enter in manufacturers suggested retail price.'
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

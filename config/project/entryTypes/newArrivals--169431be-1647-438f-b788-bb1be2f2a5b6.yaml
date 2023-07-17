@@ -1,0 +1,115 @@
+fieldLayouts:
+  3e323450-6a36-4e48-8a1c-c4222201eec7:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: edc60b94-b725-47bd-9eb1-1979ad2fc1fe
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: f74eac5c-479e-44ce-9dba-e672ea69d4c0 # New Arrivals Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5afaf536-b709-4043-a1f7-339a1f5c5e40
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 23f50ca4-df67-4771-a225-d315082a3d80 # Product Description
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7f168231-c56a-43f4-b4f5-846c911b7e45
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 3784b452-c0ac-4df7-85e6-4838f0d2e179 # Product Type
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a199468f-85c9-46b7-8a03-911ca62d3cde
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: aed23190-01f0-49ee-b4dc-6da079daced7 # Product Brand
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f2221148-3aa3-4dba-bfe8-f120c0e74058
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: c4b57835-5b96-4ec4-a5e9-94ca2bc51000 # Suggested Retail Price
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 54311db2-0d99-4e20-bcc1-01dbe006ff80
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: c05a65e1-c0f7-4fe8-bdef-0320631b8a6c # Sale Price
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 648f203d-56d6-489f-9432-b5445bf18439
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: fd291c49-1c54-4655-8253-7c8fd4d2fb1e
+        userCondition: null
+handle: newArrivals
+hasTitleField: true
+name: 'New Arrivals'
+section: d888ab54-bc47-47c1-aeea-2675c677f52e # New Arrivals
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

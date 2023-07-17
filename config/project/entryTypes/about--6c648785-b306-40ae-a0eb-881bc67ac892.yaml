@@ -1,0 +1,157 @@
+fieldLayouts:
+  f414997d-630e-465d-8357-f6043cae8637:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: Title
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 482f0b53-e61d-4901-86f1-18600c212dcd
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 013b5064-e06b-4464-99dc-5c6736b1647c # Banner Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b1c15313-2a30-46bb-af87-911b5f19bd59
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: f541b1c1-b121-4c59-a4ec-dae0a312e66e # Description
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 90eeb5dd-1e18-430e-8649-dd231da52fb1
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 4dbee5b3-ba1a-43ce-91c8-4bf029ef2081 # Our Services
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 102c9131-af96-40aa-b79d-3a4878b4ebc0
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 87561c62-c9a2-422f-aee7-36748071db5a # Listening Demos
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f6420c12-a31c-49ed-a2a3-ae5d446369b4
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 1bf898bb-8fd9-4621-936f-a0a626830661 # Equipment Repair
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0ed4bdd3-7635-49be-903d-fb12ce3ee7ff
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: a2a74b6e-84bd-4382-8378-82795f25b1d6 # Custom Cables
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 640177bd-5e93-4bbd-a8af-084903a92fc9
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 18e7a260-0b40-43fb-994b-5dc950d19d8f # Tube Testing
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 44d1b978-7cc9-4565-89a1-804f5688d7c1
+            userCondition: null
+            warning: null
+            width: 100
+        name: About
+        uid: 9b687111-6def-4896-9b44-aecf419f085e
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 7160f499-42c6-4569-bb6d-408e3b3b12ac # Staff Members
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0b45311f-9755-4d10-ae22-a47157aa5e92
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 6a913914-bdde-4106-89c6-7c202839dfbe # Staff Member Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 77de648a-2324-4099-a6ab-1cedf495dd2f
+            userCondition: null
+            warning: null
+            width: 100
+        name: Staff
+        uid: 919fb515-d7ed-4139-b0fa-87479d005fcc
+        userCondition: null
+handle: about
+hasTitleField: true
+name: About
+section: 6e538d3c-c170-41bb-91a8-a1018f85b65e # About
+sortOrder: 1
+titleFormat: '{section.name|raw}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: ''

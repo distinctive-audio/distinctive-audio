@@ -1,0 +1,16 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: ac92f2e6-6c48-48a5-bbbc-1d5cc82fb563 # Common
+handle: inventorySale
+instructions: 'Enter inventory items on sale'
+name: 'Inventory Sale'
+searchable: true
+settings:
+  contentTable: '{{%matrixcontent_inventorysale}}'
+  maxBlocks: null
+  minBlocks: null
+  propagationKeyFormat: null
+  propagationMethod: all
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

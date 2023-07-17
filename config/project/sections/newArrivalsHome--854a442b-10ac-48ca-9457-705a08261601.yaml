@@ -1,0 +1,12 @@
+defaultPlacement: end
+enableVersioning: true
+handle: newArrivalsHome
+name: 'New Arrivals Home'
+propagationMethod: all
+siteSettings:
+  a16b48a6-e0e5-4d2b-8af7-97f71004a903: # Distinctive Audio
+    enabledByDefault: true
+    hasUrls: true
+    template: new-arrivals/index
+    uriFormat: new-arrivals
+type: single

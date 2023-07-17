@@ -1,0 +1,55 @@
+fieldLayouts:
+  f525f529-bdad-4dad-b7be-9fa92a241b0c:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: 'New Arrivals Home'
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 285c0cd0-ac64-4adf-8e45-c10b479404c7
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 013b5064-e06b-4464-99dc-5c6736b1647c # Banner Image
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 9cd6559c-3173-44b7-8390-a6a1adb05250
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: e98f9e2b-d0ce-42fe-bcb4-f38dc6bd380a
+        userCondition: null
+handle: newArrivalsHome
+hasTitleField: true
+name: 'New Arrivals Home'
+section: 854a442b-10ac-48ca-9457-705a08261601 # New Arrivals Home
+sortOrder: 1
+titleFormat: 'New Arrivals Home'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

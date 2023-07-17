@@ -1,0 +1,58 @@
+columnSuffix: null
+contentColumnType: text
+fieldGroup: b6911359-fa1d-4a5e-b105-a8dbba4ba311 # Contact
+handle: schedule
+instructions: 'Enter hours of operation'
+name: Schedule
+searchable: true
+settings:
+  addRowLabel: 'Add a day'
+  columnType: text
+  columns:
+    __assoc__:
+      -
+        - col1
+        -
+          __assoc__:
+            -
+              - heading
+              - Day
+            -
+              - handle
+              - day
+            -
+              - width
+              - ''
+            -
+              - type
+              - singleline
+      -
+        - col2
+        -
+          __assoc__:
+            -
+              - heading
+              - Hours
+            -
+              - handle
+              - hours
+            -
+              - width
+              - ''
+            -
+              - type
+              - singleline
+  defaults:
+    -
+      __assoc__:
+        -
+          - col1
+          - ''
+        -
+          - col2
+          - ''
+  maxRows: 7
+  minRows: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Table

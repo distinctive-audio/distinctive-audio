@@ -1,0 +1,19 @@
+columnSuffix: null
+contentColumnType: text
+fieldGroup: b406058a-faea-4d8a-af1c-c58f1515c881 # Home
+handle: customCables
+instructions: 'Enter custom cables description'
+name: 'Custom Cables'
+searchable: true
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: null
+  initialRows: 4
+  multiline: true
+  placeholder: 'Enter custom cables description.'
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

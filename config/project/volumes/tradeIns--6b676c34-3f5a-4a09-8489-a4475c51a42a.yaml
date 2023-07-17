@@ -1,0 +1,43 @@
+fieldLayouts:
+  9d8feefd-00c6-499d-b5de-8fcf3c17399a:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\assets\AssetTitleField
+            uid: f7072580-8739-4331-b0ec-e5e4d8423536
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: f9ec42eb-3164-49b4-9b92-79a06382f98d
+        userCondition: null
+fs: tradeIns
+handle: tradeIns
+name: 'Trade Ins'
+sortOrder: 6
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+transformFs: null
+transformSubpath: ''
