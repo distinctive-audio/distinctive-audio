@@ -5,7 +5,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
     max-height: 1080px;
-    font-size: 16px;
+    font-size: 17px;
     -webkit-font-smoothing: antialiased;
     -webkit-text-size-adjust: 100%;
     -moz-osx-font-smoothing: grayscale;
@@ -14,6 +14,10 @@ body {
 
 main.sticky-footer {
     flex: 1;
+}
+
+h4 {
+    font-weight: 600;
 }
 
 .inner-content {
@@ -903,7 +907,7 @@ div h5.footer-status {
     }
 
     p, body {
-        font-size: 17px;
+        font-size: 18px;
         line-height: 1.55;
     }
 }
@@ -961,7 +965,9 @@ div h5.footer-status {
     }
 
     .main-nav li a {
-        padding: 20px 15px 15px 10px;   
+        padding: 20px 15px 15px 10px;
+        color: #515050;
+        font-size: 16px;  
     }
 
     div.products > div.product {
