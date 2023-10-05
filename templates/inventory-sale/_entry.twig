@@ -20,8 +20,11 @@
                 <!-- section title -->
                 <div class="col-sm-12 col-md-12">
                     <div class="sec-head text-left wow fadeInDown">
-                        <h1 class="h2 margin-bottom-double">{{ entry.title }}</h1>
-
+                        <h1 class="h2 inventory-sale-h1">{{ entry.title }}</h1>
+                        <h3>{{ entry.description }}</h3>
+                        <div class="inventory-sale-announcements">
+                        {{ entry.announcements }}
+                        </div>
                         <!-- Inventory List on Sale -->
                         {% for block in entry.inventorySale.all() %}
                           {% if block.type == 'inventoryTable' %}
@@ -57,7 +60,7 @@
                         <!-- Business Hours -->
                         <h1 class="h2">Get in Touch</h1>
                           <div class="row contact-form-info">
-                          <p class="col-md-7">{{ entry.description }}</p>
+                          <p class="col-md-7">Do you have a question, comment or suggestion? Feel free to use the contact form below to get in touch. Distinctive Audio is centrally located on Carling Avenue close to Dow's lake and Little Italy.</p>
                         </div>
                         {% for entry in craft.entries.section('contact').limit(1).all() %}
                         <table class="table table-striped">
@@ -128,31 +131,6 @@
                         </div>
 
                         <div class="col-sm-8 col-md-8 wow fadeIn">
-
-                            <!-- <form action="#" class="contact-form">
-                                <div class="row">
-                                    <div class="col-sm-6 input-wrap">
-                                        <input type="text" name="name" placeholder="Name" class="form-control input-field">
-                                    </div>
-                                    <div class="col-sm-6 input-wrap">
-                                        <input type="email" name="email" placeholder="Email" class="form-control input-field">
-                                    </div>
-                                    <div class="col-sm-12 input-wrap">
-                                        <input type="text" name="subject" placeholder="Subject" class="form-control input-field">
-                                    </div>
-                                    <div class="col-sm-12 input-wrap">
-                                        <textarea name="message" placeholder="Message" class="form-control input-field"></textarea>
-                                    </div>
-                                    <div class="col-sm-12 text-right">
-                                        <button type="submit" class="btn btn-main btn-shadow shutter-both">Send Message</button>
-                                    </div>
-                                    <div class="col-sm-12">
-                                        <div class="success">Your message was sent successfully.</div>
-                                        <div class="error">Something is wrong, please try again.</div>
-                                    </div>
-                                </div>
-                            </form> -->
-
 
                             {% macro errorList(errors) %}
                                 {% if errors %}

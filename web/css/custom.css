@@ -17,7 +17,8 @@ main.sticky-footer {
 }
 
 h4 {
-    font-weight: 600;
+    font-size: 1.115em;
+    font-weight: 500;
 }
 
 .inner-content {
@@ -647,6 +648,17 @@ li.current-page {
     z-index: 3;
 }
 
+/* INVENTORY SALE */
+
+h1.inventory-sale-h1 {
+    margin-bottom: 0.85em;
+}
+
+div.inventory-sale-announcements {
+    margin: 3em 0;
+}
+
+
 /* -- CONTACT PAGE -- */
 
 div.contact-page-img {
@@ -826,6 +838,9 @@ div h5.footer-status {
     margin-top: 0.5em;
 }
 
+div.copyright p {
+    color: #777;
+}
 
 /*
 .sidebar {
