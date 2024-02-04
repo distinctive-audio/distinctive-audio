@@ -986,7 +986,7 @@ div.copyright p {
     }
 
     div.products > div.product {
-        height: auto;
+        height: 7.5em;
         min-height: 6.75em;
     }
 }
